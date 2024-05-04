@@ -6,12 +6,13 @@ G = nx.DiGraph()
 
 # Define a simplified Twitter user dataset (user, follows) relationships
 twitter_users = {
-    'User1': ['User2', 'User3', 'User4'],
-    'User2': ['User1', 'User3'],
-    'User3': ['User1', 'User2', 'User4'],
-    'User4': ['User3', 'User5'],
-    'User5': ['User4', 'User6'],
-    'User6': ['User5']
+  'User1': ['User2', 'User3', 'User4', 'User5', 'User6', 'User7'],
+    'User2': ['User1', 'User3', 'User5', 'User6'],
+    'User3': ['User1', 'User2', 'User4', 'User5', 'User7'],
+    'User4': ['User1', 'User3', 'User5', 'User6', 'User7'],
+    'User5': ['User2', 'User3', 'User4', 'User6', 'User7'],
+    'User6': ['User4', 'User5', 'User7'],
+    'User7': ['User1', 'User3', 'User4', 'User5', 'User6']
 }
 
 # Add nodes (Twitter users)
