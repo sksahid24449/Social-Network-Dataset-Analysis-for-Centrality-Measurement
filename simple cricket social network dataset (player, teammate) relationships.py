@@ -3,13 +3,16 @@ import matplotlib.pyplot as plt
 
 # Define a simple cricket social network dataset (player, teammate) relationships
 cricket_data = {
-    'Sachin Tendulkar': ['Sourav Ganguly', 'Rahul Dravid', 'Virender Sehwag'],
-    'Sourav Ganguly': ['Sachin Tendulkar', 'Rahul Dravid'],
-    'Rahul Dravid': ['Sachin Tendulkar', 'Sourav Ganguly', 'VVS Laxman'],
-    'Virender Sehwag': ['Sachin Tendulkar', 'Gautam Gambhir'],
-    'VVS Laxman': ['Rahul Dravid'],
-    'Gautam Gambhir': ['Virender Sehwag']
+   'Sachin Tendulkar': ['Sourav Ganguly', 'Rahul Dravid', 'Virender Sehwag', 'MS Dhoni', 'Yuvraj Singh'],
+    'Sourav Ganguly': ['Sachin Tendulkar', 'Rahul Dravid', 'VVS Laxman'],
+    'Rahul Dravid': ['Sachin Tendulkar', 'Sourav Ganguly', 'VVS Laxman', 'Anil Kumble'],
+    'Virender Sehwag': ['Sachin Tendulkar', 'Gautam Gambhir', 'Yuvraj Singh'],
+    'VVS Laxman': ['Rahul Dravid', 'Sourav Ganguly'],
+    'Gautam Gambhir': ['Virender Sehwag', 'MS Dhoni'],
+    'MS Dhoni': ['Sachin Tendulkar', 'Gautam Gambhir', 'Yuvraj Singh'],
+    'Yuvraj Singh': ['Sachin Tendulkar', 'MS Dhoni', 'Virender Sehwag']
 }
+
 
 # Create a directed graph
 G = nx.DiGraph()
