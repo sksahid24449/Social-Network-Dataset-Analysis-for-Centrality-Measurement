@@ -5,17 +5,11 @@ import matplotlib.pyplot as plt
 G = nx.Graph()
 
 # Add nodes
-G.add_nodes_from([1, 2, 3, 4, 5])
+G.add_nodes_from(range(1, 101))
 
 # Add edges with weights
-G.add_edge(1, 2, weight=1)
-G.add_edge(1, 3, weight=2)
-G.add_edge(2, 3, weight=1)
-G.add_edge(2, 4, weight=3)
-G.add_edge(3, 4, weight=1)
-G.add_edge(3, 5, weight=4)
-G.add_edge(4, 5, weight=2)
-
+for i in range(1, 100):
+    G.add_edge(i, i+1, weight=i)
 # Visualize the graph
 nx.draw(G, with_labels=True)
 plt.show()
