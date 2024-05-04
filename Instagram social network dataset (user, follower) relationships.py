@@ -3,11 +3,16 @@ import matplotlib.pyplot as plt
 
 # Define a simple Instagram social network dataset (user, follower) relationships
 instagram_data = {
-    'Alice': ['Bob', 'Charlie', 'David'],
-    'Bob': ['Alice', 'Charlie'],
-    'Charlie': ['Alice', 'Bob', 'David'],
-    'David': ['Alice', 'Charlie']
+   'Alice': ['Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah'],
+    'Bob': ['Alice', 'Charlie', 'David', 'Eve'],
+    'Charlie': ['Alice', 'Bob', 'David', 'Eve', 'Frank'],
+    'David': ['Alice', 'Charlie', 'Eve', 'Frank', 'Grace'],
+    'Eve': ['Alice', 'Bob', 'Charlie', 'David', 'Frank', 'Grace', 'Hannah'],
+    'Frank': ['Alice', 'Charlie', 'David', 'Eve', 'Grace'],
+    'Grace': ['Alice', 'David', 'Eve', 'Frank', 'Hannah'],
+    'Hannah': ['Alice', 'Eve', 'Grace']
 }
+
 
 # Create a directed graph
 G = nx.DiGraph()
